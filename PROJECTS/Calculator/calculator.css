@@ -1,0 +1,26 @@
+.container{
+    border: 1px solid black;
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+
+#display{
+    width: 80%;
+    height: 10%;
+    margin: 10px 20px;
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons{
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+    margin: 2px;
+}

@@ -1,0 +1,21 @@
+.bag{
+    background-color: rgb(181, 248, 79);
+    border: none;
+    height: 25px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.wishlist{
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.sale{
+    padding: 5px 20px;
+    background-color: rgb(181, 248, 79);
+    border: none;
+    border-radius: 20px;
+
+
+}

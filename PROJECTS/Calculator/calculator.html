@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="display" readonly>
+        <div id="buttonContainer">
+            <button class="buttons" onclick="displayCal ='';
+            document.querySelector('#display').value = displayCal;">C</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '1';
+            document.querySelector('#display').value = displayCal;"
+            >1</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '2';
+            document.querySelector('#display').value = displayCal;">2</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '3';
+            document.querySelector('#display').value = displayCal;">3</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '4';
+            document.querySelector('#display').value = displayCal;">4</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '5';
+            document.querySelector('#display').value = displayCal;">5</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '6';
+            document.querySelector('#display').value = displayCal;">6</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '7';
+            document.querySelector('#display').value = displayCal;">7</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '8';
+            document.querySelector('#display').value = displayCal;">8</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '9';
+            document.querySelector('#display').value = displayCal;">9</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '0';
+            document.querySelector('#display').value = displayCal;">0</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '+';
+            document.querySelector('#display').value = displayCal;">+</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '-';
+            document.querySelector('#display').value = displayCal;">-</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '/';
+            document.querySelector('#display').value = displayCal;">/</button>
+
+            <button class="buttons" onclick="displayCal = displayCal + '*';
+            document.querySelector('#display').value = displayCal;">*</button>
+
+            <button class="buttons" onclick="displayCal = eval(displayCal);
+            document.querySelector('#display').value = displayCal;">=</button>
+        </div>
+    </div>
+
+    <script>
+        let displayCal = '';
+        document.querySelector('#display').value = displayCal;
+    </script>
+</body>
+</html>
