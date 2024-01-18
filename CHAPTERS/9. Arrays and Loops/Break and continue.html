@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Break & Continue</title>
+</head>
+<body>
+    <script>
+        for(let i = 1; i <= 50; i++){
+            console.log(i)
+            if (i == 25){
+                break;
+            }
+        }
+
+        let a = [2, 6, 7, 3, 6, 8, 54, 8, 1]
+
+        for(let i = 0; i < a.length; i++){
+            if (a[i] === 54){
+                console.log(`54 found on the ${i}th index`)
+                break
+            }
+        }
+
+                // Continue
+
+            for(let i = 1; i<=50; i++){
+                if (i % 2 === 0){
+                    continue
+                }
+                console.log(i);
+            }
+    </script>
+</body>
+</html>

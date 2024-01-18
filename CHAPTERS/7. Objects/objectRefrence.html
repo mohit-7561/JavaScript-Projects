@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Object Reference</title>
+</head>
+<body>
+    <script>
+        // Value Types
+        let a = 5;
+        let b = a;
+        console.log(`a = ${a} and b = ${b}`);
+        a = 1;
+        console.log(`a = ${a} and b = ${b}`);
+
+        // Reference Types
+        let x = {num1: 56};
+        let y = x;
+        console.log(`x = ${x.num1} and y = ${y.num1}`);
+        x.num1 = 50;
+        console.log(`x = ${x.num1} and y = ${y.num1}`);
+
+        // Comparing with ==, to reference, not content
+        let p = {coder: 'Yes'};
+        let q = {coder: 'Yes'};
+        console.log(p == q);
+        console.log(p === q);
+    </script>
+</body>
+</html>

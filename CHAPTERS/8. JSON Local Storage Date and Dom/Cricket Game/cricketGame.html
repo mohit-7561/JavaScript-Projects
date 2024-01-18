@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="cricket.css">
+
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button class="buttons" onclick="
+    let computerChoice = generateComputerChoice();
+    let result = getResult('Bat', computerChoice);
+    showResult('Bat', computerChoice, result);
+    
+
+    "><img src="images/Bat.png" alt="Bat-Image" class="images"></button>
+    
+    <button class="buttons" onclick="
+    computerChoice = generateComputerChoice();
+    result = getResult('Ball', computerChoice);
+    showResult('Ball', computerChoice, result);
+
+    "><img src="images/Ball.png" alt="Ball-Image" class="images"></button>
+
+    <button class="buttons" onclick="
+    computerChoice = generateComputerChoice();
+    result = getResult('Stump', computerChoice);
+    showResult('Stump', computerChoice, result);
+
+    "><img src="images/Stump.png" alt="Stump" class="images"></button>
+
+
+
+    <h3 id="userMove"></h3>
+    <h3 id="computerMove"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
+    <button onclick="localStorage.clear()
+    resetScore();
+
+">Reset</button>
+
+    <script>
+        let updatedScore = localStorage.getItem('score');
+        let score;
+        resetScore(updatedScore);
+
+        function resetScore(updatedScore){
+        score = updatedScore? JSON.parse(updatedScore) : {
+            won : 0,
+            lost : 0,
+            tie : 0,
+        };
+
+        score.displayScore = function(){
+            return  `Won:${score.won}, Lost:${score.lost}, Tie:${score.tie}`
+        };
+
+        showResult();
+
+    };
+
+        
+    
+    function generateComputerChoice(){
+        let randomNumber = Math.random()*3; // This will generate random number b/w  0 and 3
+        if (randomNumber > 0 && randomNumber <=1){
+            return 'Bat';
+        }
+        else if (randomNumber > 1 && randomNumber <=2){
+            return 'Ball';
+        }
+        else {
+            return 'Stump';
+        }
+    }
+
+    function getResult(userMove, computerMove){
+        if (userMove === 'Bat'){
+                if (computerMove === 'Bat'){
+                    score.tie++;
+                    return `It's a tie`;
+                    
+
+            }
+            else if (computerMove === 'Ball'){
+                    score.won++;
+                    return 'User has Won'
+            }
+            else if (computerMove === 'Stump'){
+                    score.lost++;
+                    return 'Computer has Won'
+            }
+        }
+        else if (userMove === 'Ball'){
+                    if (computerMove === 'Ball'){
+                        score.tie++;
+                        return `It's a tie`;
+
+            }
+            else if (computerMove === 'Stump'){
+                    score.won++;
+                    return'User has Won'
+
+            }
+            else if (computerMove === 'Bat'){
+                score.lost++;
+                return 'Computer has Won'
+
+            }
+        }
+        else {
+                if (computerMove === 'Stump'){
+                    score.tie++;
+                    return `It's a tie`;
+
+                }
+                else if (computerMove === 'Bat'){
+                    score.won++;
+                    return 'User has Won'
+
+                }
+                else if (computerMove === 'Ball'){
+                    score.lost++;
+                    return 'Computer has Won'
+
+                }
+        }
+    }
+    function showResult(userMove, computerMove, result){
+        localStorage.setItem('score', JSON.stringify(score));
+
+        document.querySelector('#userMove').innerText = 
+            userMove ?`User have chosen ${userMove}`: '';
+
+        document.querySelector('#computerMove').innerText = 
+            computerMove ? `Computer has chosen ${computerMove}`: "";
+
+        document.querySelector('#result').innerText = 
+            result || "";
+
+        document.querySelector('#score').innerText = `${score.displayScore()}`
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Set 5</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'Myntra',
+            productName: 'Shacket',
+            price: '1149',
+            discount: 50,
+            'delivery-time': '11:40AM'
+        };
+        let copyProduct = product;
+        console.log(product);
+        copyProduct.discount = 45;
+        console.log(product);
+        console.log(product['delivery-time']);
+
+        let msg = {
+            message: 'Good Job',
+            status: 'Complete',
+        };
+
+        console.log(msg);
+        let {message,status} = msg;
+        console.log(message);
+        console.log(status);
+
+        function isIdenticalProduct(product1, product2){
+            if (typeof product1 !== 'object' || typeof product2 !== 'object'){
+                console.warn('Parameter passed was not an object');
+                return false}
+            if (product1 == product2){
+                return true;
+            }
+
+            if (product1.company === product2.company &&
+            product1.price === product2.price &&
+            product1.productName === product2.productName){
+            return true;}
+
+            else {
+                return false;
+            }
+
+            
+        }
+        let product1 = {
+            company: 'Myntra',
+            productName: 'Shacket',
+            price: '1100',
+            discount: 50,};
+
+        let product2 = {
+            company: 'Myntra',
+            productName: 'Shacket',
+            price: '1149',
+            discount: 50,};
+
+        let product3 = {
+            company: 'Myntra',
+            productName: 'Shacket',
+            price: '1149',
+            discount: 50,};
+
+
+        console.log(isIdenticalProduct(product1, ''))
+        console.log(isIdenticalProduct(product1, product1))
+        console.log(isIdenticalProduct(product1, product2))
+        console.log(isIdenticalProduct(product2, product3))
+        console.log(isIdenticalProduct(product3, product2))
+        console.log(typeof product1);
+
+
+    </script>
+</body>
+</html>

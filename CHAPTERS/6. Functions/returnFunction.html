@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Return Function</title>
+</head>
+<body>
+    <script>
+
+    // function generateRandomMove(){
+    //     let random = Math.random();
+    //     let randomMove = random * 3
+    //     return randomMove;
+    // }
+
+    // console.log(generateRandomMove());
+    // console.log(generateRandomMove());
+    // console.log(generateRandomMove());
+    // console.log(generateRandomMove());
+    // console.log(generateRandomMove());
+
+       function determineDriveStatus(){
+        let age;
+        if (age === undefined){
+            return 'You are not eligible';
+        }
+        if (age >= 18){
+            return 'You can Drive';
+        } else {
+            return 'You cannot Drive';
+        }
+       }
+       console.log(determineDriveStatus());
+
+
+    </script>
+
+</body>
+</html>

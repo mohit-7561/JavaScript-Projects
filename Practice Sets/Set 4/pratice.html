@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Set 4</title>
+</head>
+<body>
+    <script>
+        function isOdd(Number){
+            let remainder = Number%2;
+            let isOdd = remainder == 1;
+            return isOdd;
+        }
+        // console.log(isOdd(5));
+
+        function isLarger(num1, num2){
+            // if (num1 > num2){
+            //     return num1;
+            // }
+            // else {
+            //     return num2;
+            // }
+            return num1 > num2 ? num1 : num2;
+
+        }
+        // console.log(isLarger(5, 7))
+        // console.log(isLarger(55, 67))
+
+        function toFahrenheit(value){
+            return 9/5*value + 32;
+        }
+        console.log(toFahrenheit(38))
+    </script>
+</body>
+</html>

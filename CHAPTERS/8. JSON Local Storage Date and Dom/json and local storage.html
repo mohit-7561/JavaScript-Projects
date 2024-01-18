@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name: 'TShirt',
+            price: 450,
+            rating: {
+                stars: 4.7,
+                noOfReview: 320,
+            }
+        };
+        console.log(typeof product);
+        console.log(product);
+        let update = JSON.stringify(product);
+        console.log(typeof update);
+        console.log(update);
+
+        let newProduct = JSON.parse(update);
+        console.log(typeof newProduct);
+        console.log(newProduct);
+
+        // localStorage.setItem('Name', 'Mohit');
+        // console.log(localStorage.getItem('Name'));
+
+        // localStorage.setItem('product', JSON.stringify(product));
+        // let product2 = JSON.parse(localStorage.getItem('product'));
+        // console.log(product2);
+        localStorage.removeItem('product');
+        localStorage.clear();
+
+
+    </script>
+</body>
+</html>

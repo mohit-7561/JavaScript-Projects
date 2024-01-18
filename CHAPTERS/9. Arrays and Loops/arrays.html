@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+                  // Array Syntax and Values
+        // let myArray = [8, 3, 5, 2, 7, 8, 10];
+        // // console.log(myArray);
+        // // console.log(myArray[3]);
+
+        // let arrayList = [67, null, false, 'Citizen'];
+        // // console.log(arrayList);
+        // // console.log(arrayList[3]);
+
+        // let falseArray = {rating : 79};
+
+        // console.log(Array.isArray(myArray));
+        // console.log(Array.isArray(arrayList));
+        // console.log(Array.isArray(falseArray));
+
+            // Array Properties and Methods
+
+            let l1 = [45, 6, 8];
+            console.log(l1);
+            l1.push(88, 90);
+            console.log(l1);
+            console.log('Popped ' + l1.pop());
+            console.log('Popped ' + l1.pop());
+            console.log('Popped from front ' + l1.shift());
+            console.log('Popped from front ' + l1.shift());
+            l1.unshift(88);
+            console.log(l1);
+
+            let l2 = [4, 6, 3, 9, 8];
+            console.log(l2.toString());
+            l2.splice(0, 2);
+            console.log(l2);
+
+            l3 = [5, 9, 3, 6, 8, 1];
+            l3.sort();          
+            console.log(l3)
+            console.log(l3.valueOf());
+
+            let l4 = l3;
+            l4[2] = 7;
+            console.log(l3);
+
+            // Destructuring
+            let l5 = [45, 67, 88, 92, 45, 37];
+            let [a, b, c, d, e, f] = l5;
+            console.log(a + ' ' + b + ' ' + c + ' ' + d + ' ' + e + ' ' + f);
+    </script>
+</body>
+</html>
