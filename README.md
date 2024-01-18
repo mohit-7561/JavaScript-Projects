@@ -1,0 +1,1 @@
+Welcome to my GitHub repository! This space is dedicated to showcasing my journey of learning and practicing JavaScript. Here, you will find a collection of projects that I've worked on to enhance my skills in JavaScript development.
