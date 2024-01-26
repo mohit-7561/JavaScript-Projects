@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="button">Click me</button>
+    <script>
+        let buttonElement = document.querySelector('#button');
+        buttonBehaviour = event => console.log('I am clicked')
+        buttonElement.addEventListener('click', buttonBehaviour);
+
+        let printDate = event => console.log(new Date());
+        buttonElement.addEventListener('click', printDate);
+
+        buttonElement.removeEventListener('click', printDate );
+    </script>
+</body>
+</html>

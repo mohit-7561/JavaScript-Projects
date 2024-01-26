@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Anonymous Functions As Values</title>
+</head>
+<body>
+    <script>
+        let sum = function(num1, num2){
+            return num1+num2;
+        };
+        //   newSum = sum;
+        // console.log(sum(8, 2))
+        // console.log(newSum(12, 8))
+
+        let sumOfThree = function(num1, num2, num3, sumOfTwo){
+            let sum1 = sumOfTwo(num1, num2);
+            return sumOfTwo(sum1, num3);
+        }
+        console.log(sumOfThree(5, 7, 3, sum));
+    </script>
+</body>
+</html>
